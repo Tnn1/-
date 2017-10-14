@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水流动画</title>
+	<style>
+	ul li{
+		margin: 0px;
+		padding:0px;
+	}
+		#cotainer{
+			width: 300px;
+			height: 300px;
+		    background-color:black;
+			color:white;
+			border-radius: 50%;
+			border: 1px  red solid;
+            box-shadow: 0px 0px 0px 8px orange;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+
+		}
+		   #water{
+		   	position: absolute;
+            border-radius: 33%;
+		   	width: 600px;
+		   	height: 600px;
+		   	background-color: red;
+		   	opacity: 0.6;
+		   	margin-top: 100px;
+		   	margin-left: -150px;
+		    animation:flow 6s linear infinite alternate;
+		    
+}
+
+          #water-top{
+          	position: absolute;
+            border-radius: 33%;
+		   	width: 600px;
+		   	height: 600px;
+		   	background-color: red;
+		   	opacity: 0.2;
+		   	margin-top: 120px;
+		   	margin-left: -150px;
+		    animation:flowAni 10s linear infinite alternate;
+          }
+        
+
+    @keyframes flow{
+        0%{  
+            background-position: 0 bottom;
+             transform: rotate(0deg);
+        }
+        100%{
+            background-position: 200 bottom;
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes flowAni{
+        0%{  
+            background-position: 0 bottom;
+             transform: rotate(0deg);
+        }
+        100%{
+            background-position: 200 bottom;
+            transform: rotate(360deg);
+        }
+
+}
+	</style>
+</head>
+<body>
+	<div id="cotainer">
+      <div id="water"></div>
+      <div id="water-top"></div>
+	</div>
+
+</body>
+</html>
